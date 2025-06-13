@@ -2,7 +2,7 @@ import React from 'react';
 
 const About: React.FC = () => {
   return (
-    <section className="py-12 px-4 bg-white" id="about">
+    <section className="py-8 px-4 bg-white" id="about">
       <div className="container mx-auto max-w-4xl">
         <h2 className="text-3xl md:text-4xl font-bold text-red-600 mb-8 text-center">
           What is UpReach?

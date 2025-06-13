@@ -2,7 +2,7 @@ import React from 'react';
 
 const Hero: React.FC = () => {
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center px-4 relative overflow-hidden bg-white">
+    <section className="min-h-screen flex flex-col items-center justify-center px-4 relative overflow-hidden bg-white pb-8">
       <div className="absolute inset-0 bg-gradient-to-b from-red-50 to-white z-0"></div>
       
       <div className="container mx-auto text-center relative z-10 max-w-4xl">
@@ -23,23 +23,6 @@ const Hero: React.FC = () => {
         >
           Stay Tuned
         </button>
-      </div>
-      
-      <div className="absolute bottom-10 left-0 right-0 flex justify-center animate-bounce">
-        <svg 
-          className="w-8 h-8 text-red-500"
-          fill="none" 
-          stroke="currentColor" 
-          viewBox="0 0 24 24" 
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path 
-            strokeLinecap="round" 
-            strokeLinejoin="round" 
-            strokeWidth="2" 
-            d="M19 14l-7 7m0 0l-7-7m7 7V3"
-          ></path>
-        </svg>
       </div>
     </section>
   );
