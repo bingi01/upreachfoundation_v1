@@ -1,5 +1,4 @@
 import React from 'react';
-import { ArrowRight } from 'lucide-react';
 
 const Hero: React.FC = () => {
   return (
@@ -18,12 +17,11 @@ const Hero: React.FC = () => {
         </h2>
         
         <button 
-          className="bg-red-600 text-white px-8 py-3 rounded-full font-medium flex items-center mx-auto 
+          className="bg-red-600 text-white px-8 py-3 rounded-full font-medium mx-auto 
                     hover:bg-red-700 transition-all duration-300 animate-fadeIn animation-delay-600
                     transform hover:scale-105"
         >
           Stay Tuned
-          <ArrowRight className="ml-2 h-5 w-5" />
         </button>
       </div>
       
