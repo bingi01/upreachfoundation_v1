@@ -2,14 +2,14 @@ import React from 'react';
 
 const About: React.FC = () => {
   return (
-    <section className="py-16 px-4 bg-white" id="about">
+    <section className="py-12 px-4 bg-white" id="about">
       <div className="container mx-auto max-w-4xl">
         <h2 className="text-3xl md:text-4xl font-bold text-red-600 mb-8 text-center">
           What is UpReach?
         </h2>
         
         <div className="bg-red-50 p-6 md:p-10 rounded-2xl shadow-md">
-          <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
+          <p className="text-base md:text-lg text-gray-700 leading-relaxed">
             UpReach is a heartfelt initiative dedicated to empowering underprivileged children and those in need. 
             Rooted in compassion, it aims to transform lives through education, care, and opportunities. 
             Every action counts, and every smile matters.
