@@ -1,7 +1,7 @@
 export const carouselImages = [
   {
-    url: "https://drive.google.com/file/d/1BusUlqWBoGKkPrFIvJ1YeOnR_3EGEoyY/view?usp=sharing",
-    alt: "We are here for you"
+    url: "https://images.pexels.com/photos/1250452/pexels-photo-1250452.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    alt: ""
   },
   {
     url: "https://images.pexels.com/photos/764681/pexels-photo-764681.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
