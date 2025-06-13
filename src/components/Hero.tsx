@@ -13,7 +13,7 @@ const Hero: React.FC = () => {
           sharing smiles
         </p>
         <h2 className="text-xl md:text-2xl text-gray-700 mb-8 max-w-2xl mx-auto animate-fadeIn animation-delay-400">
-          UpReach – A step towards a brighter, kinder world.
+          A step towards a brighter, kinder world.
         </h2>
         
         <button 
