@@ -1,6 +1,6 @@
 export const carouselImages = [
   {
-    url: "https://images.pexels.com/photos/1250452/pexels-photo-1250452.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    url: "https://upreachfoundation.s3.ap-northeast-1.amazonaws.com/1.jpg",
     alt: ""
   },
   {
