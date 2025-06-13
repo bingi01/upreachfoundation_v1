@@ -1,6 +1,6 @@
 export const carouselImages = [
   {
-    url: "https://upreachfoundation.s3.ap-northeast-1.amazonaws.com/1.jpg",
+    url: "https://upreachfoundation.s3.ap-northeast-1.amazonaws.com/1.1.jpg",
     alt: ""
   },
   {
