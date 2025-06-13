@@ -22,17 +22,17 @@ const ComingSoon: React.FC = () => {
 
     try {
       // Initialize EmailJS (you'll need to replace these with your actual EmailJS credentials)
-      emailjs.init("OcLWoxepiJS6DtMXP"); // Replace with your EmailJS public key
+      emailjs.init("mAfa7rXiapWmt4zHk"); // Replace with your EmailJS public key
       
       // Send email notification to you
       await emailjs.send(
-        "service_dxrjmlt", // Replace with your EmailJS service ID
-        "template_5svab0w", // Replace with your EmailJS template ID
+        "service_9hrzubs", // Replace with your EmailJS service ID
+        "template_99cy24g", // Replace with your EmailJS template ID
         {
-          to_email: "bingisaikumar97@gmail.com",
-          from_name: "UpReach Foundation Website",
+          to_email: "info.upreachfoundation@gmail.com",
+          from_name: "UpReach Foundation",
           user_email: email,
-          message: `New email subscription from UpReach Foundation website: ${email}`,
+          message: `New email subscription from UpReach Foundation: ${email}`,
           subject: "New UpReach Foundation Email Subscription"
         }
       );
