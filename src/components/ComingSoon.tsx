@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import { Send } from 'lucide-react';
+import emailjs from '@emailjs/browser';
 
 const ComingSoon: React.FC = () => {
   const [email, setEmail] = useState('');
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
     // Simple email validation
@@ -15,10 +17,35 @@ const ComingSoon: React.FC = () => {
       return;
     }
     
-    // In a real app, you would send this to a backend service
-    console.log('Email submitted:', email);
-    setSubmitted(true);
+    setIsLoading(true);
     setError('');
+
+    try {
+      // Initialize EmailJS (you'll need to replace these with your actual EmailJS credentials)
+      emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your EmailJS public key
+      
+      // Send email notification to you
+      await emailjs.send(
+        "YOUR_SERVICE_ID", // Replace with your EmailJS service ID
+        "YOUR_TEMPLATE_ID", // Replace with your EmailJS template ID
+        {
+          to_email: "bingisaikumar97@gmail.com",
+          from_name: "UpReach Foundation Website",
+          user_email: email,
+          message: `New email subscription from UpReach Foundation website: ${email}`,
+          subject: "New UpReach Foundation Email Subscription"
+        }
+      );
+      
+      console.log('Email submitted:', email);
+      setSubmitted(true);
+      setError('');
+    } catch (error) {
+      console.error('Failed to send email:', error);
+      setError('Failed to submit. Please try again.');
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -42,15 +69,25 @@ const ComingSoon: React.FC = () => {
                   placeholder="Your email address"
                   className={`w-full px-5 py-3 rounded-full border ${
                     error ? 'border-red-400' : 'border-gray-300'
-                  } focus:outline-none focus:ring-2 focus:ring-red-500 pr-12`}
+                  } focus:outline-none focus:ring-2 focus:ring-red-500 pr-12 ${
+                    isLoading ? 'opacity-50' : ''
+                  }`}
                   required
+                  disabled={isLoading}
                 />
                 <button 
                   type="submit"
-                  className="absolute right-1 top-1 bg-red-600 text-white p-2 rounded-full 
-                            hover:bg-red-700 transition-colors duration-300"
+                  disabled={isLoading}
+                  className={`absolute right-1 top-1 bg-red-600 text-white p-2 rounded-full 
+                            hover:bg-red-700 transition-colors duration-300 ${
+                              isLoading ? 'opacity-50 cursor-not-allowed' : ''
+                            }`}
                 >
-                  <Send className="h-5 w-5" />
+                  {isLoading ? (
+                    <div className="animate-spin h-5 w-5 border-2 border-white border-t-transparent rounded-full"></div>
+                  ) : (
+                    <Send className="h-5 w-5" />
+                  )}
                 </button>
               </div>
               {error && <p className="text-red-500 mt-2 text-sm">{error}</p>}
