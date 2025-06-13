@@ -7,7 +7,7 @@ const Footer: React.FC = () => {
       <div className="container mx-auto text-center">
         <div className="flex flex-col items-center justify-center space-y-4">
           <p className="text-gray-700 flex items-center">
-            An initiative by 
+            An initiative by
             <span className="font-medium ml-2">Bingi</span>
           </p>
           
