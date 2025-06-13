@@ -10,7 +10,7 @@ const Hero: React.FC = () => {
           UpReach Foundation
         </h1>
         <p className="text-xl md:text-2xl text-red-500 mb-6 italic animate-fadeIn animation-delay-200">
-          sharing smiles
+          sharing smiles..
         </p>
         <h2 className="text-xl md:text-2xl text-gray-700 mb-8 max-w-2xl mx-auto animate-fadeIn animation-delay-400">
           A step towards a brighter, kinder world.
